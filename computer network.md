@@ -23,17 +23,6 @@
 
 * 传输数据的单位：比特
 
-通道：
-* 单向通道（单工通道）：只有一个方向通信，没有反方向交互，如广播
-* 双向交替通信（半双工通信）：通信双方都可发消息，但不能同时发送或接收
-* 双向同时通信（全双工通信）：通信双方可以同时发送和接收信息
-
-通道复用技术：
-* 频分复用（FDM，Frequency Division Multiplexing）：
-* 时分复用（TDM，Time Division Multiplexing）：
-* 波分复用（WDM，Wavelength Division Multiplexing）：(和频分复用本质是一个东西)
-* 码分复用（CDM，Code Division Multiplexing）：
-
 ### 数据链路层
 
 主要信道：
