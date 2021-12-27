@@ -2094,7 +2094,6 @@ int main()
 ### 物理层
 
 * 传输数据的单位：比特
-* 数据传输系统：源系统（源点、发送器） --> 传输系统 --> 目的系统（接收器、终点）
 
 通道：
 * 单向通道（单工通道）：只有一个方向通信，没有反方向交互，如广播
@@ -2102,10 +2101,10 @@ int main()
 * 双向同时通信（全双工通信）：通信双方可以同时发送和接收信息
 
 通道复用技术：
-* 频分复用（FDM，Frequency Division Multiplexing）：不同用户在不同频带，所用用户在同样时间占用不同带宽资源
-* 时分复用（TDM，Time Division Multiplexing）：不同用户在同一时间段的不同时间片，所有用户在不同时间占用同样的频带宽度
-* 波分复用（WDM，Wavelength Division Multiplexing）：光的频分复用
-* 码分复用（CDM，Code Division Multiplexing）：不同用户使用不同的码，可以在同样时间使用同样频带通信
+* 频分复用（FDM，Frequency Division Multiplexing）：
+* 时分复用（TDM，Time Division Multiplexing）：
+* 波分复用（WDM，Wavelength Division Multiplexing）：(和频分复用本质是一个东西)
+* 码分复用（CDM，Code Division Multiplexing）：
 
 ### 数据链路层
 
@@ -2118,18 +2117,17 @@ int main()
 * 数据单元：帧
 
 三个基本问题：
-* 封装成帧：把网络层的 IP 数据报封装成帧，`SOH - 数据部分 - EOT`
-* 透明传输：不管数据部分什么字符，都能传输出去；可以通过字节填充方法解决（冲突字符前加转义字符）
+* 封装成帧：把网络层的 IP 数据报封装成帧：`SOH - 数据部分 - EOT`
+* 透明传输：/可以通过字节填充方法解决（冲突字符前加转义字符）
 * 差错检测：降低误码率（BER，Bit Error Rate），广泛使用循环冗余检测（CRC，Cyclic Redundancy Check）
 
 点对点协议（Point-to-Point Protocol）：
-* 点对点协议（Point-to-Point Protocol）：用户计算机和 ISP 通信时所使用的协议
+* 点对点协议（Point-to-Point Protocol）：用户计算机和 ISP互联网服务提供商 通信时所使用的协议
 
 #### 广播信道
 
 广播通信：
-* 硬件地址（物理地址、MAC 地址）
-* 单播（unicast）帧（一对一）：收到的帧的 MAC 地址与本站的硬件地址相同
+* 单播（unicast）帧（一对一）：收到的帧的 MAC 地址与本站的MAC地址相同
 * 广播（broadcast）帧（一对全体）：发送给本局域网上所有站点的帧
 * 多播（multicast）帧（一对多）：发送给本局域网上一部分站点的帧
 
