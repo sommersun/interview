@@ -62,11 +62,8 @@ Eg. 129.11.11.39/24
 
 
 #### ICMP 网际控制报文协议
-
-应用：
 * PING（Packet InterNet Groper，分组网间探测）测试两个主机之间的连通性
 * TTL（Time To Live，生存时间）该字段指定 IP 包被路由器丢弃之前允许通过的最大网段数量
-
 
 
 #### VPN 和 NAT
@@ -87,8 +84,6 @@ Eg. 129.11.11.39/24
 3. 路由中需要过滤的出/入连接列表
 
 ### 运输层
-
-协议：
 
 * TCP（Transmission Control Protocol，传输控制协议）
 * UDP（User Datagram Protocol，用户数据报协议）
@@ -117,43 +112,19 @@ TCP 如何保证可靠传输：
 * 拥塞控制
 * 数据校验
 
-TCP 报文结构
 
-![TCP 报文](https://gitee.com/huihut/interview/raw/master/images/TCP报文.png)
-
-TCP 首部
-
-![TCP 首部](https://gitee.com/huihut/interview/raw/master/images/TCP首部.png)
-
-TCP：状态控制码（Code，Control Flag），占 6 比特，含义如下：
-* URG：紧急比特（urgent），当 `URG＝1` 时，表明紧急指针字段有效，代表该封包为紧急封包。它告诉系统此报文段中有紧急数据，应尽快传送(相当于高优先级的数据)， 且上图中的 Urgent Pointer 字段也会被启用。
-* ACK：确认比特（Acknowledge）。只有当 `ACK＝1` 时确认号字段才有效，代表这个封包为确认封包。当 `ACK＝0` 时，确认号无效。
-* PSH：（Push function）若为 1 时，代表要求对方立即传送缓冲区内的其他对应封包，而无需等缓冲满了才送。
-* RST：复位比特(Reset)，当 `RST＝1` 时，表明 TCP 连接中出现严重差错（如由于主机崩溃或其他原因），必须释放连接，然后再重新建立运输连接。
-* SYN：同步比特(Synchronous)，SYN 置为 1，就表示这是一个连接请求或连接接受报文，通常带有 SYN 标志的封包表示『主动』要连接到对方的意思。
-* FIN：终止比特(Final)，用来释放一个连接。当 `FIN＝1` 时，表明此报文段的发送端的数据已发送完毕，并要求释放运输连接。
 
 #### UDP
 
-* UDP（User Datagram Protocol，用户数据报协议）是 OSI（Open System Interconnection 开放式系统互联） 参考模型中一种无连接的传输层协议，提供面向事务的简单不可靠信息传送服务，其传输的单位是用户数据报。
+* UDP（User Datagram Protocol，用户数据报协议）不可靠，其传输的单位是用户数据报。
 
 特征：
 * 无连接
 * 尽最大努力交付
 * 面向报文
-* 没有拥塞控制
 * 支持一对一、一对多、多对一、多对多的交互通信
-* 首部开销小
 
-UDP 报文结构
 
-![UDP 报文](https://gitee.com/huihut/interview/raw/master/images/UDP报文.png)
-
-UDP 首部
-
-![UDP 首部](https://gitee.com/huihut/interview/raw/master/images/UDP首部.png)
-
-> TCP/UDP 图片来源于：<https://github.com/JerryC8080/understand-tcp-udp>
 
 #### TCP 与 UDP 的区别
 
