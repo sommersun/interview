@@ -31,8 +31,6 @@ TCP/IP 四层模型
 * 点对点信道
 * 广播信道
 
-#### 点对点信道
-
 * 数据单元：帧
 
 三个基本问题：
@@ -69,19 +67,13 @@ Eg. 129.11.11.39/24
 #### VPN 和 NAT
 
 * VPN（Virtual Private Network，虚拟专用网）
-* NAT（Network Address Translation，网络地址转换）
+* NAT（Network Address Translation，网络地址转换）将内部网络的私有IP地址转换为公有IP地址,增加了内部网络的安全性  
 
 #### 路由表包含什么？
 
 1. 网络 ID（Network ID, Network number）：就是目标地址的网络 ID。
 2. 子网掩码（subnet mask）：用来判断 IP 所属网络
-3. 下一跳地址/接口（Next hop / interface）：就是数据在发送到目标地址的旅途中下一站的地址。其中 interface 指向 next hop（即为下一个 route）。一个自治系统（AS, Autonomous system）中的 route 应该包含区域内所有的子网络，而默认网关（Network id: `0.0.0.0`, Netmask: `0.0.0.0`）指向自治系统的出口。
-
-根据应用和执行的不同，路由表可能含有如下附加信息：
-
-1. 花费（Cost）：就是数据发送过程中通过路径所需要的花费。
-2. 路由的服务质量
-3. 路由中需要过滤的出/入连接列表
+3. 下一跳地址/接口（Next hop / interface）：就是数据在发送到目标地址的旅途中下一站的地址。其中 interface 指向 next hop（即为下一个 route）。  
 
 ### 运输层
 
@@ -96,7 +88,7 @@ http 80端口
 
 * 面向连接
 * 只能点对点（一对一）通信
-* 可靠交互
+* 可靠交付
 * 全双工通信
 * 面向字节流
 
