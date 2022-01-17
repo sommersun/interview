@@ -1,21 +1,11 @@
 ## 💾 数据库
 
-> 本节部分知识点来自《数据库系统概论（第 5 版）》
-
-### 基本概念
-
-* 数据（data）  
-* 数据库（DataBase，DB）  
-* 数据库管理系统（DataBase Management System，DBMS）
-* 数据库系统（DataBase System，DBS）：是有数据库、数据库管理系统（及其应用开发工具）、应用程序和数据库管理员（DataBase Administrator DBA）组成的存储、管理、处理和维护数据的系统。
-* 实体（entity）
-* 属性（attribute）
-* 码（key）：唯一标识实体的属性集称为码。
-* 联系（relationship）：实体之间的联系通常是指不同实体集之间的联系。
-* 模式（schema）：模式也称逻辑模式，是数据库全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图。
-* 外模式（external schema）：外模式也称子模式（subschema）或用户模式，它是数据库用户（包括应用程序员和最终用户）能够看见和使用的局部数据的逻辑结构和特征的描述，是数据库用户的数据视图，是与某一应用有关的数据的逻辑表示。
-* 内模式（internal schema）：内模式也称为存储模式（storage schema），一个数据库只有一个内模式。他是数据物理结构和存储方式的描述，是数据库在数据库内部的组织方式。
-
+原子性
+（Atomic）
+一致性
+（Consistent)
+隔离性
+（Insulation
 ### 常用数据模型
 
 * 层次模型（hierarchical model）
