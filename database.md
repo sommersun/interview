@@ -53,7 +53,11 @@
 
 * 数据库索引：顺序索引、B+ 树索引、hash 索引
 * [MySQL 索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
-
+为什么要使用B+tree作为索引? (一般)
+索引文件的形式存储的磁盘上,查询时间主要取决于磁盘I/O的存取次数，而不是存取一次的时间，预读的长度一般为页（page）的整倍数，所以B+tree的大小为1页。  
+MySQL索引实现  
+MyISAM：叶节点的data域存放的是数据记录的地址，非聚集索引  
+InnoDB: 叶节点data域保存了完整的数据记录。这个索引的key是数据表的主键,聚集索引，因此自增且短的字段适合做主键  
 
 ### 数据库完整性
 
