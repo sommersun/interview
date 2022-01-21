@@ -1,26 +1,13 @@
 ## 💾 数据库
 
-原子性
-（Atomic）
-一致性
-（Consistent)
-隔离性
-（Insulation
-### 常用数据模型
 
-* 层次模型（hierarchical model）
-* 网状模型（network model）
-* 关系模型（relational model）
-    * 关系（relation）：一个关系对应通常说的一张表
-    * 元组（tuple）：表中的一行即为一个元组
-    * 属性（attribute）：表中的一列即为一个属性
-    * 码（key）：表中可以唯一确定一个元组的某个属性组
-    * 域（domain）：一组具有相同数据类型的值的集合
-    * 分量：元组中的一个属性值
-    * 关系模式：对关系的描述，一般表示为 `关系名(属性1, 属性2, ..., 属性n)`
-* 面向对象数据模型（object oriented data model）
-* 对象关系数据模型（object relational data model）
-* 半结构化数据模型（semistructure data model）
+### 关系型数据库与非关系型数据库
+
+ 高并发读写能力差：网站类用户的并发性访问非常高，而一台数据库的最大连接数有限，且硬盘 I/O 有限，不能满足很多人同时连接。  
+ NOSQL  
+ 键值数据库：Redis、Memcached、Riak  
+ 文档数据库：MongoDB、CouchDB、MarkLogic  
+
 
 ### 常用 SQL 操作
 
