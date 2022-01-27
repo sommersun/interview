@@ -42,11 +42,15 @@ TCP/IP 四层模型
 
 ISP互联网服务提供商  
 MAC 地址/物理地址 48位 ：用于在网络中唯一标识一个网卡  
+ARP（Address Resolution Protocol，地址解析协议）  
+①ARP（Address Resolution Protocol）即地址解析协议， 用于实现从 IP 地址到 MAC 地址的映射，即询问目标IP对应的MAC地址。  
+②在网络通信中，主机和主机通信的数据包需要依据OSI模型从上到下进行数据封装，当数据封装完整后，再向外发出。所以在局域网的通信中，不仅需要源目IP地址的封装，也需要源目MAC的封装。  
+③一般情况下，上层应用程序更多关心IP地址而不关心MAC地址，所以需要通过ARP协议来获知目的主机的MAC地址，完成数据封装。  
 
 ### 网络层
 
 * IP（Internet Protocol，网际协议）
-* ARP（Address Resolution Protocol，地址解析协议）
+
 * ICMP（Internet Control Message Protocol，网际控制报文协议）
 * IGMP（Internet Group Management Protocol，网际组管理协议）
 
